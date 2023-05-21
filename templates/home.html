@@ -1,0 +1,2389 @@
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>British Logo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="assets/dist/style.css"> -->
+        <link rel="shortcut icon" href="{{ headerlogo.headerlogo.image.url }}" type="image/x-icon">
+        <style>
+            @charset "UTF-8";
+            @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100;200;300;400;500;600;700;800;900;1000&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+            @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+            * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+            }
+            :root {
+            --responsive-font: 1.83rem
+            }
+            a {
+            text-decoration: none
+            }
+            a:hover {
+            color: currentColor
+            }
+            ol,
+            ul {
+            list-style: none;
+            padding: 0
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            ol,
+            ul {
+            margin: 0
+            }
+            body {
+            background: #fff;
+            color: #030231;
+            font-family: Inter, sans-serif;
+            font-weight: 400
+            }
+            .main-bg {
+            background-color: #fff
+            }
+            img {
+            width: 100%
+            }
+            main {
+            overflow-x: hidden
+            }
+            html {
+            font-size: 62.5%
+            }
+            @media only screen and (max-width:75em) {
+            html {
+            font-size: 56.25%
+            }
+            }
+            @media only screen and (max-width:52.25em) {
+            html {
+            font-size: 50%
+            }
+            }
+            @media only screen and (max-width:23.75em) {
+            html {
+            font-size: 44%
+            }
+            }
+            @media only screen and (max-width:21.25em) {
+            html {
+            font-size: 42%
+            }
+            }
+            @media only screen and (max-width:18.125em) {
+            html {
+            font-size: 35%
+            }
+            }
+            @media only screen and (min-width:112.5em) {
+            html {
+            font-size: 75%
+            }
+            }
+            @media screen and (orientation:landscape) and (min-device-width:320px) and (max-device-width:450px) {
+            .container {
+            max-width: 608px
+            }
+            }
+            @media only screen and (min-width:112.5em) {
+            .container {
+            max-width: 120rem
+            }
+            }
+            @media only screen and (max-width:37.5em) {
+            .container {
+            max-width: 38rem
+            }
+            }
+            .section-padding {
+            padding: 8rem 0
+            }
+            @media only screen and (max-width:52.25em) {
+            .section-padding {
+            padding: 7rem 1rem
+            }
+            }
+            .btn {
+            align-items: center;
+            background: #005eec;
+            border: 1px solid #005eec;
+            border-radius: 6rem;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            font-size: 1.5rem;
+            font-weight: 500;
+            gap: 1rem;
+            justify-content: center;
+            letter-spacing: .02em;
+            padding: 1rem 2.4rem;
+            transition: all .2s ease-in;
+            white-space: nowrap
+            }
+            .btn:hover {
+            background: #fff
+            }
+            .btn--outline,
+            .btn:hover {
+            border: 1px solid #030231;
+            color: #030231
+            }
+            .btn--outline {
+            background: transparent;
+            border-radius: 50px
+            }
+            .btn--outline:hover {
+            background: #005eec;
+            border: 1px solid #005eec;
+            color: #fff
+            }
+            .btn--nav {
+            font-size: 1.2rem;
+            padding: .7rem 2rem
+            }
+            .btn--white {
+            background: #fff;
+            border: 1px solid #fff;
+            color: #005eec
+            }
+            .btn--black {
+            background: #000;
+            border: 1px solid #fff;
+            color: #fff
+            }
+            .btn-grp {
+            align-items: center;
+            display: flex;
+            gap: 1rem
+            }
+            @media only screen and (max-width:61.875em) {
+            .btn-grp {
+            display: none
+            }
+            }
+            @-webkit-keyframes headerSlideDown {
+            0% {
+            margin-top: -100px
+            }
+            to {
+            margin-top: 0
+            }
+            }
+            @keyframes headerSlideDown {
+            0% {
+            margin-top: -100px
+            }
+            to {
+            margin-top: 0
+            }
+            }
+            .no-scrolling {
+            overflow: hidden
+            }
+            .slick-list.draggable {
+            cursor: grab
+            }
+            .section-heading {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center
+            }
+            .section-heading__sub-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: .2em;
+            line-height: 1
+            }
+            .section-heading__title {
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: -.016em;
+            line-height: 110%;
+            max-width: 57rem
+            }
+            .section-heading__description {
+            font-size: 1.7rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.4
+            }
+            .section-heading--center {
+            align-items: center;
+            text-align: center
+            }
+            .hidden {
+            display: none
+            }
+            .social-links {
+            gap: 1.2rem
+            }
+            .social-links,
+            .social-links li {
+            align-items: center;
+            display: flex
+            }
+            .social-links li {
+            background: #030231;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            justify-content: center;
+            padding: .64rem 1rem
+            }
+            .social-links li a {
+            color: #fff
+            }
+            .faq__container {
+            width: 100%
+            }
+            .faq__container details {
+            background: #f7f7f7;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            padding: 1rem 2rem
+            }
+            .faq__container details summary {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            font-size: 1.6rem;
+            font-weight: 600;
+            justify-content: space-between;
+            letter-spacing: -.012em;
+            line-height: 1.4;
+            width: 100%
+            }
+            .faq__container details summary:after {
+            content: "›";
+            font-size: 2rem;
+            transform: rotate(90deg);
+            transition: .3s
+            }
+            .faq__container details p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            height: fit-content;
+            letter-spacing: .001em;
+            line-height: 1.5;
+            padding-top: 1rem
+            }
+            .faq__container details[open] summary:after {
+            transform: rotate(-90deg)
+            }
+            .faq__container--2 summary {
+            font-weight: 400 !important
+            }
+            .faq__container.service-page summary {
+            font-weight: 800
+            }
+            .slick-track {
+            display: flex !important
+            }
+            .slick-slide {
+            height: inherit !important
+            }
+            .d-mobile {
+            display: none
+            }
+            @media only screen and (max-width:52.25em) {
+            .d-mobile {
+            display: flex
+            }
+            }
+            .d-desktop {
+            display: flex
+            }
+            @media only screen and (max-width:52.25em) {
+            .d-desktop {
+            display: none
+            }
+            }
+            .bg-F7F9FF {
+            background: #f7f9ff !important
+            }
+            .bg-000 {
+            background: #000 !important;
+            color: #fff !important
+            }
+            .bg-CBDAFF {
+            background: #cbdaff !important;
+            color: #000 !important
+            }
+            .mt-large {
+            margin-top: 8rem
+            }
+            .nav {
+            padding: 1rem 0
+            }
+            .nav--services {
+            background: #41ff76
+            }
+            .nav.sticky {
+            -webkit-animation: fadeInDown .5s ease-in-out 0s 1 normal none running;
+            -moz-animation: fadeInDown .5s ease-in-out 0s 1 normal none running;
+            animation: fadeInDown .5s ease-in-out 0s 1 normal none running;
+            -webkit-animation: headerSlideDown .5s ease forwards;
+            animation: headerSlideDown .5s ease forwards;
+            background: #fff !important;
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, .09);
+            left: 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000
+            }
+            .nav__content {
+            align-items: center;
+            display: flex;
+            justify-content: space-between
+            }
+            .nav__img {
+            width: 15rem
+            }
+            @media only screen and (max-width:61.875em) {
+            .nav__img {
+            width: 20rem
+            }
+            }
+            @media only screen and (max-width:37.5em) {
+            .nav__img {
+            width: 25rem
+            }
+            }
+            .nav__list {
+            align-items: center;
+            display: flex;
+            gap: 2.5rem;
+            margin-left: auto;
+            margin-right: 2.5rem
+            }
+            @media only screen and (max-width:61.875em) {
+            .nav__list {
+            background-image: url(../img/header_bg_new.png);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            left: 0;
+            position: fixed;
+            top: -100%;
+            transition: all .5s ease-in-out;
+            width: 100%;
+            z-index: 2000
+            }
+            .nav__list.active {
+            height: 105%;
+            top: 0
+            }
+            }
+            .nav__list-title {
+            display: none
+            }
+            @media only screen and (max-width:61.875em) {
+            .nav__list-title {
+            display: block;
+            margin-bottom: 3rem
+            }
+            .nav__list-title a {
+            font-size: 3.5rem !important
+            }
+            }
+            .nav__li a {
+            color: #030231;
+            font-size: 1.35rem;
+            font-weight: 600;
+            line-height: 1.2
+            }
+            @media only screen and (max-width:61.875em) {
+            .nav__li a {
+            font-size: 2.5rem
+            }
+            }
+            .nav__li a:hover {
+            color: #005eec
+            }
+            .nav__li-link {
+            display: none
+            }
+            @media only screen and (max-width:61.875em) {
+            .nav__li-link {
+            display: block
+            }
+            }
+            .nav__logo {
+            align-items: center;
+            display: flex;
+            gap: 1rem
+            }
+            @media only screen and (max-width:37.5em) {
+            .nav__logo {
+            margin: 0 auto
+            }
+            }
+            .nav__logo h1 {
+            color: #000;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: -.012em;
+            line-height: 1
+            }
+            .nav__menu {
+            display: none;
+            height: 1rem;
+            margin-top: 1rem;
+            position: relative;
+            position: absolute;
+            right: 2.5rem;
+            top: 4rem;
+            width: 1rem;
+            z-index: 2500
+            }
+            @media only screen and (max-width:61.875em) {
+            .nav__menu {
+            display: inline-block;
+            order: 1
+            }
+            }
+            .nav__menu ul {
+            cursor: pointer;
+            height: 20px;
+            left: 50%;
+            position: absolute;
+            top: -61%;
+            transform: translate(-50%, -50%);
+            width: 20px
+            }
+            .nav__menu ul li {
+            background: #fff;
+            box-shadow: 0 0 7px rgba(0, 0, 0, .5);
+            height: 3.5px;
+            left: 0;
+            list-style: none;
+            position: absolute;
+            transform: translateY(-50%);
+            transition: .9s;
+            width: 100%
+            }
+            .nav__menu ul li:first-of-type {
+            top: 25%
+            }
+            .nav__menu ul li:nth-of-type(2) {
+            top: 55%
+            }
+            .nav__menu ul li:nth-of-type(3) {
+            top: 85%
+            }
+            .nav__menu ul li:last-child {
+            font-size: 30px;
+            height: auto;
+            text-align: center;
+            top: 100%;
+            transform: none;
+            transition: .9s;
+            width: 100%
+            }
+            .nav__menu ul.active {
+            left: 94%;
+            position: fixed;
+            top: 4%;
+            z-index: 2500
+            }
+            .nav__menu ul.active li:first-of-type {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg) rotateY(180deg)
+            }
+            .nav__menu ul.active li:nth-of-type(2) {
+            opacity: 0;
+            scale: .1
+            }
+            .nav__menu ul.active li:nth-of-type(3) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg) rotateY(180deg)
+            }
+            .nav__menu ul li:last-child:after,
+            .nav__menu ul li:last-child:before {
+            left: 0;
+            position: absolute;
+            top: 0;
+            transition: .2s;
+            width: 100%
+            }
+            .header {
+            padding: 15rem 0 8rem
+            }
+            .header__content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            text-align: center
+            }
+            .header__title {
+            font-family: Roboto Flex;
+            font-size: 8.9rem;
+            font-style: normal;
+            font-weight: 1000;
+            line-height: 1;
+            text-transform: uppercase
+            }
+            .header__title--95 {
+            font-size: 6rem
+            }
+            .header__sub-title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: .001em;
+            line-height: 1.5;
+            max-width: 80%
+            }
+            .header__slider-container {
+            margin-top: 8rem
+            }
+            .header__slider-two-img {
+            display: flex !important;
+            flex-direction: column;
+            gap: 1.5rem
+            }
+            .header__slider-img {
+            cursor: pointer;
+            margin-right: 1.5rem;
+            overflow: hidden;
+            position: relative;
+            transition: all .2s ease-out
+            }
+            .header__slider-img:before {
+            background: transparent;
+            content: "";
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: all .3s ease-out;
+            visibility: hidden;
+            width: 100%;
+            z-index: 10
+            }
+            .header__slider-img:hover img {
+            transform: scale(1.15)
+            }
+            .header__slider-img:hover:before {
+            background: linear-gradient(180deg, rgba(11, 25, 38, 0) 50%, rgba(11, 25, 38, .5));
+            opacity: 1;
+            visibility: visible
+            }
+            .header__slider-img:hover .header__slider-caption {
+            opacity: 1;
+            visibility: visible
+            }
+            .header__slider-img img {
+            height: 100%;
+            transition: all .2s ease-out
+            }
+            .header__slider-caption {
+            bottom: 3rem;
+            color: #fff;
+            font-size: 2.2rem;
+            font-weight: 1.6;
+            font-weight: 700;
+            left: 2rem;
+            opacity: 0;
+            position: absolute;
+            transition: all .3s ease-in .1s;
+            visibility: hidden;
+            z-index: 12
+            }
+            .about {
+            padding-bottom: 15rem
+            }
+            .about__right {
+            height: 100%;
+            position: relative
+            }
+            .about__img-block {
+            height: 100%
+            }
+            .about__img-can {
+            bottom: -16rem;
+            left: -40rem;
+            min-width: 80rem;
+            position: absolute
+            }
+            .about--2 {
+            padding-bottom: 8rem;
+            padding-top: 15rem
+            }
+            .about--3 {
+            padding: 10rem 0 8rem
+            }
+            .about--3 .about__left {
+            align-items: center;
+            display: flex;
+            height: 100%
+            }
+            .about--3 .about__left.services-page {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem
+            }
+            .about--3 .section-heading__title {
+            font-size: 6.2rem
+            }
+            .about--3 .video-section__li {
+            align-items: flex-start;
+            flex-direction: column
+            }
+            .about--p8 {
+            padding: 8rem 0
+            }
+            .features {
+            background: #030231
+            }
+            .features__left {
+            padding: 8rem
+            }
+            .features__left,
+            .features__right {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center
+            }
+            .features__right details {
+            background: transparent;
+            color: #fff;
+            margin-bottom: 0
+            }
+            .features__right details[open] {
+            background: #fff;
+            color: #030231
+            }
+            .facts__single {
+            align-items: center;
+            display: flex;
+            height: 100%;
+            justify-content: center
+            }
+            .facts__single-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem 0;
+            position: relative
+            }
+            .facts__single-border {
+            background: #030231;
+            border-radius: 9px;
+            bottom: 0;
+            height: 5px;
+            left: 0;
+            position: absolute;
+            width: 100%
+            }
+            .facts__single-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: .2em;
+            line-height: 1
+            }
+            .facts__single-counter {
+            font-size: 4rem;
+            font-weight: 600;
+            letter-spacing: -.016em;
+            line-height: 1.2
+            }
+            .facts__single-sub-title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.5
+            }
+            .facts__single-img {
+            width: 2rem
+            }
+            .clients__title {
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: .2em;
+            line-height: 1;
+            text-align: center
+            }
+            .clients__slider {
+            margin-top: 3rem
+            }
+            .clients__slider-img {
+            padding: 4rem
+            }
+            .video-section__headings {
+            padding-left: 14rem
+            }
+            .video-section__content {
+            border-radius: 12px;
+            margin-top: 8rem;
+            overflow: hidden;
+            position: relative;
+            width: 100%
+            }
+            .video-section__content video {
+            cursor: pointer;
+            width: 100%
+            }
+            .video-section__muteButton {
+            background: #005eec;
+            border: none;
+            border-radius: 2rem;
+            bottom: 2rem;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2rem;
+            height: 4rem;
+            line-height: 4rem;
+            position: absolute;
+            right: 2rem;
+            text-align: center;
+            transition: all .2s ease-in;
+            width: 4rem;
+            z-index: 5
+            }
+            .video-section__muteButton:hover {
+            background: #005eec !important;
+            color: #fff !important
+            }
+            .video-section__muteButton--1 {
+            background: #005eec;
+            color: #fff
+            }
+            .video-section__muteButton--1:hover {
+            background: #fff !important;
+            color: #005eec !important
+            }
+            .video-section__pause {
+            align-items: center;
+            background: hsla(0, 0%, 100%, .5);
+            border-radius: 50%;
+            color: #005eec;
+            cursor: pointer;
+            display: flex;
+            font-size: 2.5rem;
+            height: 5rem;
+            justify-content: center;
+            left: 50%;
+            padding-left: 5px;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .2s ease-in;
+            width: 5rem
+            }
+            .video-section__pause.hidden {
+            display: none
+            }
+            .video-section__pause:hover {
+            background: #005eec !important;
+            color: #fff !important
+            }
+            .video-section__hr {
+            background: #e2e2e2;
+            color: #e2e2e2;
+            height: 2px;
+            margin: 6rem 0 4rem
+            }
+            .video-section__li {
+            align-items: center;
+            display: flex;
+            gap: 2rem
+            }
+            .video-section__li-icon {
+            align-items: center;
+            background: #f7f7f7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            padding: 1.3rem
+            }
+            .video-section__li-icon img {
+            width: 2.2rem
+            }
+            .video-section__li-icon--2 img {
+            width: 2rem
+            }
+            .video-section__li-text {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.2
+            }
+            .video-section__list {
+            align-items: center;
+            display: flex;
+            justify-content: space-between
+            }
+            .video-section__list.services-page {
+            gap: 3rem;
+            margin-left: -15rem;
+            margin-top: 5rem;
+            position: relative;
+            z-index: 1
+            }
+            .video-section__list.services-page .video-section__li {
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 7px 1.4rem 7.4rem rgba(0, 0, 0, .06);
+            padding: 3rem
+            }
+            .video-section__list.services-page .video-section__li-icon {
+            padding: 2rem
+            }
+            .video-section__list.services-page .video-section__li-icon img {
+            width: 2.7rem
+            }
+            .cta-section {
+            background: #030231;
+            padding: 15rem 0
+            }
+            .cta-section__content .header__title {
+            color: #fff;
+            text-align: left
+            }
+            .cta-section__heading {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 8rem;
+            padding-right: 20rem
+            }
+            .cta-section__heading .section-heading__description {
+            color: #fff;
+            max-width: 50rem
+            }
+            .cta-section__heading .btn--outline {
+            border: 1px solid #fff;
+            color: #fff
+            }
+            .cta-section__heading.service-page {
+            justify-content: flex-start
+            }
+            .cta-section__img-container {
+            margin-top: 5rem;
+            position: relative;
+            z-index: 0
+            }
+            .cta-section__img-left {
+            align-items: center;
+            display: flex;
+            position: relative
+            }
+            .cta-section__img-1 {
+            margin-bottom: -65%;
+            position: relative;
+            width: 60%;
+            z-index: 2
+            }
+            .cta-section__img-2 {
+            margin-bottom: -65%;
+            position: relative;
+            transform: translateX(-40%);
+            width: 40%;
+            z-index: 1
+            }
+            .cta-section .video-section__muteButton,
+            .cta-section .video-section__pause {
+            background: #fff;
+            color: #005eec
+            }
+            .cta-section__video-desc {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5rem
+            }
+            .cta-section__video-desc .section-heading__description {
+            color: #fff;
+            font-weight: 400;
+            max-width: 40%
+            }
+            .cta-section__video-desc.service-page {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 3rem;
+            margin-left: 50%
+            }
+            .cta-section__video-desc.service-page .section-heading__description {
+            font-weight: 500;
+            max-width: 80%
+            }
+            .testimonial {
+            background: #fff;
+            position: relative;
+            z-index: 5
+            }
+            .testimonial__left {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            height: 100%;
+            justify-content: center;
+            padding-right: 3rem
+            }
+            .testimonial__left .header__title {
+            font-size: 7rem
+            }
+            .testimonial__right {
+            height: 100%
+            }
+            .testimonial__slider-btn {
+            background: #f5f5f5;
+            cursor: pointer;
+            font-size: 3rem;
+            font-weight: 600;
+            padding: 1.8rem 2.4rem
+            }
+            .testimonial__slider-btn:hover {
+            background: hsla(0, 0%, 96%, .7)
+            }
+            .testimonial__slider-btn.swiper-button-disabled {
+            cursor: auto;
+            opacity: .35;
+            pointer-events: none
+            }
+            .testimonial__slider .swiper {
+            overflow: initial !important
+            }
+            .testimonial__slider .swiper-slide.swiper-slide-visible.swiper-slide-active {
+            margin-left: -7rem;
+            margin-right: 13rem;
+            opacity: 1 !important;
+            transition: all .3s !important;
+            visibility: visible !important
+            }
+            .testimonial__slider .swiper-slide-visible.swiper-slide-next,
+            .testimonial__slider .swiper-slide-visible.swiper-slide-prev,
+            .testimonial__slider .swiper-slide.swiper-slide-visible.swiper-slide-active {
+            transition: all 1s !important
+            }
+            .testimonial__slider .swiper-slide-visible.swiper-slide-next {
+            opacity: 1 !important;
+            transform: translateX(10px) !important;
+            visibility: visible !important;
+            z-index: 1 !important
+            }
+            .testimonial__slider .swiper-slide-visible.swiper-slide-next .swiper-slide-shadow-right {
+            opacity: 0 !important
+            }
+            .testimonial__slider .swiper-slide {
+            opacity: 0 !important;
+            visibility: hidden !important
+            }
+            .testimonial__slider .swiper-slide .swiper-slide-shadow-left,
+            .testimonial__slider .swiper-slide .swiper-slide-shadow-right {
+            opacity: 0 !important
+            }
+            .testimonial__slider .swiper-slide-visible.swiper-slide-prev {
+            transform: translate3d(100%, 0, -112.403px) rotateX(0deg) rotateY(0deg) scale(1) scale3d(.3, .3, .3) !important
+            }
+            .testimonial__slide {
+            align-items: flex-start;
+            background: #005eec;
+            border-radius: 4rem;
+            display: flex !important;
+            flex-direction: column;
+            gap: 3rem;
+            margin-right: 3rem;
+            min-width: 40rem;
+            overflow: hidden;
+            padding: 4rem;
+            position: relative;
+            transition: all 1s ease-in-out;
+            z-index: 4
+            }
+            .testimonial__slide-bg--2 {
+            background: #030231
+            }
+            .testimonial__slide-img {
+            width: 15rem
+            }
+            .testimonial__slide-title {
+            color: #fff;
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -.012em;
+            line-height: 1.2
+            }
+            .testimonial__slide-btn {
+            margin-top: 7rem;
+            width: auto
+            }
+            .testimonial__slide.prevSlide {
+            transform: translateX(100%) scale3d(.3, .3, .3) !important;
+            z-index: 1
+            }
+            .testimonial__slide.nextSlide {
+            transform: translateX(0) !important
+            }
+            .testimonial .btn-grp {
+            gap: 2.5rem;
+            z-index: 10
+            }
+            .blog__content {
+            margin-top: 5rem
+            }
+            .blog__single {
+            height: 100%
+            }
+            .blog__single-type {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: .2em;
+            line-height: 1.3
+            }
+            .blog__single-title {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -.012em;
+            line-height: 1.2
+            }
+            .blog__single-desc {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.5
+            }
+            .blog__single-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 1rem
+            }
+            .blog__single-content {
+            padding: 2rem
+            }
+            .blog__single-user {
+            align-items: center;
+            display: flex;
+            gap: 2rem
+            }
+            .blog__single-user-img {
+            width: 4rem
+            }
+            .blog__single-user-name {
+            font-size: 1.3rem;
+            font-weight: 700
+            }
+            .blog__single-user-name,
+            .blog__single-user-sub {
+            font-family: Roboto Flex;
+            font-style: normal;
+            line-height: 1
+            }
+            .blog__single-user-sub {
+            font-size: 1.4rem;
+            font-weight: 400
+            }
+            .faq__left,
+            .faq__right {
+            height: 100%
+            }
+            .faq__img {
+            width: 80%
+            }
+            .cta-section-3 {
+            background: #f7f7f7
+            }
+            .cta-section-3 .header__content {
+            margin: auto;
+            max-width: 70%
+            }
+            .cta-section-3 .header__sub-title {
+            font-weight: 700
+            }
+            .footer__content {
+            display: grid;
+            grid-template-columns: 30% repeat(3, 1fr);
+            margin-bottom: 4rem
+            }
+            .footer__item {
+            padding-left: 2rem
+            }
+            .footer__item-head {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -.012em;
+            line-height: 1.3;
+            margin-bottom: 0
+            }
+            .footer__item-head img {
+            margin-right: 0;
+            width: 15rem
+            }
+            .footer__item-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 3rem
+            }
+            .footer__item-sub,
+            .footer__item-sub-link {
+            color: #030231;
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.3
+            }
+            .footer__item-sub--desc {
+            padding-right: 3rem
+            }
+            .footer__copyright {
+            align-items: center;
+            border-top: 1px solid #e2e2e2;
+            display: flex;
+            justify-content: space-between;
+            padding: 4rem 0 0
+            }
+            .footer__copyright-text {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.3
+            }
+            .services-header {
+            background: #41ff76;
+            margin-bottom: 20rem
+            }
+            .services-header__email {
+            align-items: center;
+            display: flex;
+            margin: 3rem 0;
+            width: 4 0
+            }
+            .services-header__email-input {
+            border: none;
+            border-radius: 5rem;
+            color: #000;
+            font-size: 1.4rem;
+            font-size: 1.7rem;
+            font-weight: 400;
+            height: 100%;
+            line-height: 1;
+            outline: none;
+            padding: 1.5rem 2rem;
+            text-align: left;
+            width: 80%
+            }
+            .services-header__email-input::placeholder {
+            color: #000;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: 1;
+            opacity: .45
+            }
+            .services-header__email-btn {
+            margin-left: -5rem;
+            padding: 1.4rem 2rem
+            }
+            .services-header .header__img {
+            margin-top: 2rem;
+            width: 70%
+            }
+            .services-header .header__img-container {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-bottom: -30rem;
+            transform: translateX(10%)
+            }
+            .services-page__about-left {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center
+            }
+            .services-page__about-right {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            padding: 8rem;
+            position: relative
+            }
+            .services-page__about-right .about__img-block {
+            grid-column: 2/-1;
+            grid-row: 1/4
+            }
+            .services-page__about-right .about__img-block--2 {
+            grid-column: 1/4;
+            grid-row: 3/5;
+            transform: translateY(2 5%)
+            }
+            .services__left-new {
+            padding: 5rem
+            }
+            .works__img-container,
+            .works__img-container img {
+            height: 100%
+            }
+            .works__card {
+            align-items: center;
+            background: #41ff76;
+            border-radius: 20px;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            padding: 4rem;
+            position: relative
+            }
+            .works__card:after {
+            background-image: url(../img/work_bg.jpg);
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: "";
+            height: 100%;
+            left: 0;
+            opacity: .1;
+            position: absolute;
+            top: 0;
+            width: 100%
+            }
+            .works__card .section-heading {
+            position: relative;
+            z-index: 5
+            }
+            .works .row {
+            margin-top: 2rem
+            }
+            .works .row:nth-child(2) .works__card {
+            background: #005eec;
+            color: #fff !important
+            }
+            .works .row:nth-child(2) .works__card:after {
+            display: none
+            }
+            .sc__content,
+            .sc__single,
+            .works__content {
+            margin-top: 5rem
+            }
+            .sc__single {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            height: 100%;
+            justify-content: flex-start
+            }
+            .sc__single-title {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -.012em;
+            line-height: 133%;
+            text-align: center
+            }
+            .sc__single-desc {
+            font-size: 1.7rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 140%
+            }
+            .sc__single-icon {
+            background: transparent;
+            padding: 0
+            }
+            .sc__single-icon img {
+            width: 8rem
+            }
+            .st__single {
+            background: #fafafa;
+            border-radius: 24px;
+            box-shadow: 0 94px 200px hsla(0, 0%, 8%, .09)
+            }
+            .st__content {
+            margin: 20rem 5rem
+            }
+            .st__quotes {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            padding: 8rem;
+            position: relative
+            }
+            .st__quotes-text {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -.012em;
+            line-height: 1.28;
+            margin-bottom: 3rem
+            }
+            .st__quotes-user {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -.012em;
+            line-height: 1.33
+            }
+            .st__quotes-designation {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: .001em;
+            line-height: 1.62
+            }
+            .st__quotes:before {
+            color: hsla(0, 0%, 40%, .4);
+            content: "”";
+            font-family: sans-serif;
+            font-size: 20rem;
+            left: 70%;
+            line-height: 1;
+            opacity: .2;
+            position: absolute;
+            top: 58%
+            }
+            .st__img {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            position: relative
+            }
+            .st__img img {
+            position: absolute;
+            top: -8rem;
+            width: 80%
+            }
+            .st__btn {
+            bottom: -5px;
+            left: -100%;
+            padding: 1rem 3rem;
+            position: absolute
+            }
+            .st__right-most {
+            height: 100%;
+            position: relative
+            }
+            .st__swiper {
+            overflow: visible
+            }
+            .st__swiper .swiper-slide-next,
+            .st__swiper .swiper-slide-prev {
+            opacity: 0;
+            visibility: hidden
+            }
+            .st__swiper .swiper-slide-visible.swiper-slide-next,
+            .st__swiper .swiper-slide-visible.swiper-slide-prev,
+            .st__swiper .swiper-slide.swiper-slide-visible.swiper-slide-active {
+            transition: all 5s !important
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="main-bg">
+            <nav class="nav" id="nav">
+                <div class="container">
+                    <div class="nav__content">
+                        <a href="index.html" class="nav__logo">
+                        {% if headerlogo.headerlogo %}
+                        <img src="{{ headerlogo.headerlogo.image.url }}" alt="logo" class="nav__img">
+                        {% endif %}
+                        </a>
+                        <ul class="nav__list">
+                            {% if menu %}
+                            {% for det in menu %}
+                            <li class="nav__li"><a href="{{det.url}}">{{ det.name }}</a></li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                        <div class="btn-grp">
+                            {% if headerlogo.bookademo %}
+                            <a href="#" class="btn btn--nav">
+                            {{ headerlogo.bookademo }}
+                            </a>
+                            {% endif %}
+                        </div>
+                        <div class="nav__menu ">
+                            <ul class="open-btn">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header -->
+            <header class="header section-padding">
+                <div class="container">
+                    <div class="header__content">
+                        {% if homepage.text1 %}
+                        <h1 class="header__title">{{ homepage.text1 }}</h1>
+                        {% endif %}
+                        {% if homepage.text2 %}
+                        <p class="header__sub-title">
+                            {{ homepage.text2 }}
+                        </p>
+                        {% endif %}
+                        <div class="btn-grp">
+                            {% if homepage.Buttontext3 %}
+                            <a href="#" class="btn">
+                            {{ homepage.Buttontext3 }}
+                            </a>
+                            {% endif %}
+                            {% if homepage.Buttontext4 %}
+                            <a href="#" class="btn btn--outline">
+                            {{ homepage.Buttontext4 }}
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="header__slider-container">
+                    {% for image in result %}
+                    {% if forloop.counter0|divisibleby:4 %}
+                    <div class="header__slider-img">
+                        <img src="{{ image.sliderimage.image.url }}" alt="{{ image.caption }}">
+                        <h3 class="header__slider-caption">{{ image.caption }}</h3>
+                    </div>
+                    {% else %}
+                    {% if forloop.counter0|divisibleby:2 %}
+                    <div class="header__slider-two-img">
+                        {% endif %}
+                        <div class="header__slider-img">
+                            <img src="{{ image.sliderimage.image.url }}" alt="{{ image.caption }}">
+                            <h3 class="header__slider-caption">{{ image.caption }}</h3>
+                        </div>
+                        {% if forloop.counter|divisibleby:4 or forloop.last %}
+                    </div>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </header>
+            <section class="about section-padding">
+                <div class="container">
+                    <div class="about__section">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6">
+                                <div class="about__left">
+                                    <div class="section-heading">
+                                        <h6 class="section-heading__sub-title">
+                                            {{ homepage.text5 }}
+                                        </h6>
+                                        <h1 class="section-heading__title">
+                                            {{ homepage.text6 }}
+                                        </h1>
+                                        <p class="section-heading__description">
+                                            {{ homepage.text7 }}
+                                        </p>
+                                        <div class="btn-grp">
+                                            <a href="#" class="btn">
+                                            {{ homepage.Buttontext8 }}
+                                            </a>
+                                            <a href="#" class="btn btn--outline">
+                                            {{ homepage.Buttontext9 }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="about__right">
+                                    <img src="{{ homepage.aboutimg.image.url }}" alt="about img" class="about__img-block">
+                                    <img src="{{ homepage.aboutimgcan.image.url }}" alt="about img" class="about__img-can">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="features section-padding">
+                <div class="container">
+                    <div class="features__content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="features__left">
+                                    <img src="{{ homepage.pencilimage }}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="features__right">
+                                    <div class='faq__container'>
+                                        {% if details %}
+                                        {% for det in details %}
+                                        <details class='faq__tab-item'  data-img="{{ det.detailsphoto.image.url }}">
+                                            <summary>{{ det.detailsquestion }} </summary>
+                                            <p>{{ det.detailsanswer }}.</p>
+                                        </details>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About- 2 -->
+            <section class="about section-padding about--2">
+                <div class="container">
+                    <div class="about__section">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6">
+                                <div class="about__left">
+                                    <div class="section-heading">
+                                        <!-- <h6 class="section-heading__sub-title">
+                                            OUR APPROACH
+                                            </h6> -->
+                                        <h1 class="section-heading__title">
+                                            {{ homepage.text10 }}
+                                        </h1>
+                                        <p class="section-heading__description">
+                                            {{ homepage.text11 }}
+                                        </p>
+                                        <div class="btn-grp">
+                                            <a href="#" class="btn">
+                                            {{ homepage.buttontext12 }}
+                                            </a>
+                                            <a href="#" class="btn btn--outline">
+                                            {{ homepage.buttontext13 }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about__right">
+                                    <img src="{{ homepage.afoursizeimg.image.url }}" alt="about img" class="about__img-block">
+                                    <!-- <img src="assets/img/icecream-can.png" alt="about img" class="about__img-can"> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="facts section-padding">
+                <div class="container">
+                    <div class="facts__content">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="facts__single">
+                                    <div class="facts__single-content">
+                                        <img src="{{ homepage.crownimg1.image.url }}" alt="" class="facts__single-img">
+                                        <h4 class="facts__single-title">
+                                            {{ homepage.text14 }}                              
+                                        </h4>
+                                        <h1 class="facts__single-counter">
+                                            {{ homepage.text15 }} 
+                                        </h1>
+                                        <h6 class="facts__single-sub-title">
+                                            {{ homepage.text16 }}                              </h4>
+                                        </h6>
+                                        <div class="facts__single-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="facts__single">
+                                    <div class="facts__single-content">
+                                        <img src="{{ homepage.crownimg2.image.url }}" alt="" class="facts__single-img">
+                                        <h4 class="facts__single-title">
+                                            {{ homepage.text17 }}
+                                        </h4>
+                                        <h1 class="facts__single-counter">
+                                            {{ homepage.text18 }} 
+                                        </h1>
+                                        <h6 class="facts__single-sub-title">
+                                            {{ homepage.text19 }} 
+                                        </h6>
+                                        <div class="facts__single-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="facts__single">
+                                    <div class="facts__single-content">
+                                        <img src="{{ homepage.crownimg3 }}" alt="" class="facts__single-img">
+                                        <h4 class="facts__single-title">
+                                            {{ homepage.text20 }} 
+                                        </h4>
+                                        <h1 class="facts__single-counter">
+                                            {{ homepage.text21 }} 
+                                        </h1>
+                                        <h6 class="facts__single-sub-title">
+                                            {{ homepage.text22 }} 
+                                        </h6>
+                                        <div class="facts__single-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="facts__single">
+                                    <div class="facts__single-content">
+                                        <img src="{{ homepage.crownimg4.image.url }}" alt="" class="facts__single-img">
+                                        <h4 class="facts__single-title">
+                                            {{ homepage.text23 }} 
+                                        </h4>
+                                        <h1 class="facts__single-counter">
+                                            {{ homepage.text24 }} 
+                                        </h1>
+                                        <h6 class="facts__single-sub-title">
+                                            {{ homepage.text25 }} 
+                                        </h6>
+                                        <div class="facts__single-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="clients section-padding">
+                <div class="container">
+                    <div class="clients__content">
+                        <h3 class="clients__title">
+                            {{ homepage.text26 }}                   
+                        </h3>
+                        <div class="clients__slider">
+                            <div class="clients__slider-img">
+                                <img src="{{ homepage.google.image.url }} " alt="clients-1">
+                            </div>
+                            <div class="clients__slider-img">
+                                <img src="{{ homepage.facebook.image.url }} " alt="clients-1">
+                            </div>
+                            <div class="clients__slider-img">
+                                <img src="{{ homepage.hubspot3.image.url }} " alt="clients-1">
+                            </div>
+                            <div class="clients__slider-img">
+                                <img src="{{ homepage.googleads.image.url }} " alt="clients-1">
+                            </div>
+                            <div class="clients__slider-img">
+                                <img src="{{ homepage.googlenetwork.image.url }} " alt="clients-1">
+                            </div>
+                            <div class="clients__slider-img">
+                                <img src="{{ homepage.youtubeads.image.url }} " alt="clients-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="video-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="video-section__headings">
+                                <div class="section-heading">
+                                    <h6 class="section-heading__sub-title">
+                                        {{ homepage.text33 }}
+                                    </h6>
+                                    <h1 class="section-heading__title">
+                                        {{ homepage.text34 }}
+                                    </h1>
+                                    <p class="section-heading__description">
+                                        {{ homepage.text35 }}
+                                    </p>
+                                    <div class="btn-grp">
+                                        <a href="#" class="btn">
+                                        {{ homepage.buttontext36 }}
+                                        </a>
+                                        <a href="#" class="btn btn--outline">
+                                        {{ homepage.buttontext37 }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-section__content">
+                        <video id="myMovie" poster="{{ homepage.video1poster.image.url }}">
+                            <source
+                                src="{{ homepage.video1 }}" />
+                        </video>
+                        <a id="MuteButton" class="muted video-section__muteButton video-section__muteButton--1">
+                        <i class="fas fa-volume-mute video-section__mute-btn hidden"></i>
+                        <i class="fas fa-volume-up video-section__mute-btn "></i>
+                        </a>
+                        <a id="Playpause" class="video-section__pause">
+                        ▶
+                        </a>
+                    </div>
+                    <hr class="video-section__hr">
+                    <ul class="video-section__list">
+                        <li class="video-section__li">
+                            <div class="video-section__li-icon">
+                                <img src="{{ homepage.text27svg.image.url}}" alt="assets">
+                            </div>
+                            <h6 class="video-section__li-text">
+                                {{ homepage.text27 }}
+                            </h6>
+                        </li>
+                        <li class="video-section__li">
+                            <div class="video-section__li-icon">
+                                <img src="{{ homepage.text28svg.image.url}}" alt="assets">
+                            </div>
+                            <h6 class="video-section__li-text">
+                                {{ homepage.text28 }}
+                            </h6>
+                        </li>
+                        <li class="video-section__li">
+                            <div class="video-section__li-icon">
+                                <img src="{{ homepage.text29svg.image.url}}" alt="assets">
+                            </div>
+                            <h6 class="video-section__li-text">
+                                {{ homepage.text29 }}
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- cta-section-1 -->
+            <section class="cta-section section-padding">
+                <div class="container">
+                    <div class="cta-section__content">
+                        <h1 class="header__title">{{ homepage.text38 }}
+                        </h1>
+                        <div class="cta-section__heading">
+                            <div class="section-heading">
+                                <p class="section-heading__description">
+                                    {{ homepage.text39 }}
+                                </p>
+                                <div class="btn-grp">
+                                    <a href="#" class="btn">
+                                    {{ homepage.buttontext40 }}
+                                    </a>
+                                    <a href="#" class="btn btn--outline">
+                                    {{ homepage.buttontext41 }}
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cta-section__img-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="cta-section__img-left">
+                                        <img src="{{ homepage.soccer.image.url }}" alt="cta-section-1"
+                                            class="cta-section__img-1">
+                                        <img src="{{ homepage.soccerblur.image.url }}" alt="cta-section-1"
+                                            class="cta-section__img-2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial -->
+            <section class="testimonial section-padding">
+                <div class="container">
+                    <div class="testimonial__content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="testimonial__left">
+                                    <h1 class="header__title testimonial__title">
+                                        {{ homepage.text30 }}
+                                    </h1>
+                                    <ul class="btn-grp">
+                                        <div
+                                            class="testimonial__slider-btn testimonial__slider-btn-prev video-section__li-icon">
+                                            <i class="bi bi-arrow-left"></i>
+                                        </div>
+                                        <div
+                                            class="testimonial__slider-btn  testimonial__slider-btn-next video-section__li-icon">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="testimonial__right">
+                                    <div class="testimonial__slider">
+                                        <div class="swiper mySwiper">
+                                            <div class="swiper-wrapper">
+                                                {% if review %}
+                                                {% for det in review %}
+                                                <div class="swiper-slide">
+                                                    <div class="testimonial__slide">
+                                                        <img src="{{ det.userphoto.image.url }}" alt="user"
+                                                            class="testimonial__slide-img">
+                                                        <h5 class="testimonial__slide-title">
+                                                            {{ det.text }}
+                                                        </h5>
+                                                        <button class="btn btn--white testimonial__slide-btn">
+                                                        {{ det.watchvideo }}
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                {% endfor %}
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- cta-section-2 -->
+            <section class="cta-section section-padding">
+                <div class="container">
+                    <div class="cta-section__content">
+                        <h1 class="header__title">{{homepage.text31}}
+                        </h1>
+                        <div class="cta-section__heading">
+                            <div class="section-heading">
+                                <p class="section-heading__description">
+                                    {{ homepage.text32}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="video-section__content">
+                            <video id="cta-video" poster="{{ homepage.ctavideoposter.image.url }}">
+                                <source
+                                    src="{{ homepage.video2 }}" />
+                            </video>
+                            <a id="cta-MuteButton" class="muted video-section__muteButton">
+                            <i class="fas fa-volume-mute video-section__cta-mute-btn hidden"></i>
+                            <i class="fas fa-volume-up video-section__cta-mute-btn "></i>
+                            </a>
+                            <a id="cta-Playpause" class="video-section__pause">
+                            ▶
+                            </a>
+                        </div>
+                        <div class="cta-section__video-desc">
+                            {% if homepage.text32 %}
+                            <p class="section-heading__description">
+                                {{ homepage.text32 }}
+                            </p>
+                            {% endif %}
+                            {% if homepage.buttontext42 %}
+                            <a href="#" class="btn">
+                            {{ homepage.buttontext42 }}
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- About- 3 -->
+            <section class="about section-padding about--2 about--3">
+                <div class="container">
+                    <div class="about__section">
+                        <div class="row justify-content-between">
+                            <div class="col-md-7">
+                                <div class="about__left">
+                                    <div class="section-heading">
+                                        <!-- <h6 class="section-heading__sub-title">
+                                            OUR APPROACH
+                                            </h6> -->
+                                        {% if homepage.text43 %}
+                                        <h1 class="section-heading__title">
+                                            {{ homepage.text43}}
+                                        </h1>
+                                        {% endif %}
+                                        {% if homepage.text44 %}
+                                        <p class="section-heading__description">
+                                            {{ homepage.text44}}
+                                        </p>
+                                        {% endif %}
+                                        <div class="btn-grp">
+                                            {% if homepage.buttontext45 %}
+                                            <a href="#" class="btn">
+                                            {{ homepage.buttontext45 }}
+                                            </a>
+                                            {% endif %}
+                                            <!-- <a href="#" class="btn btn--outline">
+                                                Compare price
+                                                </a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="about__right">
+                                    <img src="{{ homepage.thumpsup.image.url }}" alt="about img" class="about__img-block">
+                                    <!-- <img src="assets/img/icecream-can.png" alt="about img" class="about__img-can"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="video-section__list">
+                            <li class="video-section__li">
+                                <div class="video-section__li-icon video-section__li-icon--2">
+                                    <img src="{{ homepage.svg1.image.url }}" alt="assets">
+                                </div>
+                                {% if homepage.text46 %}
+                                <h6 class="video-section__li-text">
+                                    {{ homepage.text46 }}
+                                </h6>
+                                {% endif %}
+                            </li>
+                            <li class="video-section__li">
+                                <div class="video-section__li-icon video-section__li-icon--2">
+                                    <img src="{{ homepage.svg2.image.url }}" alt="assets">
+                                </div>
+                                {% if homepage.text47 %}
+                                <h6 class="video-section__li-text">
+                                    {{ homepage.text47 }}
+                                </h6>
+                                {% endif %}
+                            </li>
+                            <li class="video-section__li">
+                                <div class="video-section__li-icon video-section__li-icon--2">
+                                    <img src="{{ homepage.svg3.image.url }}" alt="assets">
+                                </div>
+                                {% if homepage.text48 %}
+                                <h6 class="video-section__li-text">
+                                    {{ homepage.text48 }}
+                                </h6>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <hr class="video-section__hr m-0">
+            </div>
+            <section class="blog section-padding">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        {% if homepage.text49 %}
+                        <h1 class="header__title header__title--95">{{ homepage.DailyBlogs }}</h1>
+                        {% endif %}
+                        {% if homepage.buttontext42 %}
+                        <a href="#" class="btn">
+                        {{ homepage.buttontext42 }}
+                        </a>
+                        {% endif %}
+                    </div>
+                    <div class="blog__content">
+                        <div class="row">
+                            {% if blog %}
+                            {% for det in blog %}
+                            <div class="col-md-4">
+                                <div class="blog__single">
+                                    <div class="blog__single-content">
+                                        <img src="{{ det.thumbnail.image.url }}" alt="blog-img" class="blog__single-img">
+                                        <div class="blog__single-details">
+                                            <h6 class="blog__single-type">
+                                                {{ det.tag.tag }}
+                                            </h6>
+                                            <h3 class="blog__single-title">
+                                                {{ det.title }}
+                                            </h3>
+                                            <p class="blog__single-desc">
+                                                {{ det.summary }}
+                                            </p>
+                                            <div class="blog__single-user">
+                                                <img src="{{ det.Postauthor.profilephoto.image.url }}" alt="blog user"
+                                                    class="blog__single-user-img">
+                                                <div class="blog__single-user-details">
+                                                    <h1 class="blog__single-user-name">
+                                                        {{ det.Postauthor.name }}
+                                                    </h1>
+                                                    <h6 class="blog__single-user-sub">
+                                                        {{ det.Postauthor.Position }}
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %} 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <hr class="video-section__hr m-0">
+            </div>
+            <section class="faq section-padding">
+                <div class="container">
+                    <div class="faq__content">
+                        <div class="row justify-content-between">
+                            <div class="col-md-5">
+                                <div class="faq__left">
+                                    <div class="section-heading">
+                                        <h6 class="section-heading__sub-title">
+                                            {% if homepage.text49 %}
+                                            {{ homepage.text49 }}
+                                            {% endif %}
+                                        </h6>
+                                        <h1 class="section-heading__title">
+                                            {% if homepage.text50 %}
+                                            {{ homepage.text50 }}
+                                            {% endif %}
+                                        </h1>
+                                        <div class="btn-grp">
+                                            <a href="#" class="btn">
+                                            {% if homepage.buttontext51 %}
+                                            {{ homepage.buttontext51 }}
+                                            {% endif %}
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {% if homepage.cup %}
+                                    <img src="{{ homepage.cup.image.url }}" alt="cup" class="faq__img mt-3">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="faq__right">
+                                    <div class='faq__container faq__container--2'>
+                                        {% if faq %}
+                                        {% for det in faq %}
+                                        <details class='faq__tab-item'>
+                                            <summary>{{ det.question }}</summary>
+                                            <p>{{ det.answer }}</p>
+                                        </details>
+                                        {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cta-section-3 section-padding">
+                <div class="container">
+                    <div class="cta-section-3__content">
+                        <div class="header__content">
+                            <h1 class="header__title header__title--95">{% if homepage.text52 %}
+                                {{ homepage.text52 }}
+                                {% endif %}
+                            </h1>
+                            <p class="header__sub-title">
+                                {% if homepage.text53 %}
+                                {{ homepage.text53 }}
+                                {% endif %}
+                            </p>
+                            <div class="btn-grp">
+                                <a href="#" class="btn">
+                                {% if homepage.LearnMorebutton %}
+                                {{ homepage.LearnMorebutton }}
+                                {% endif %}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="footer section-padding">
+                <div class="container">
+                    <ul class="footer__content">
+                        <li class="footer__item">
+                            <h2 class="footer__item-head">
+                                <img src="{{ headerlogo.headerlogo.image.url }}" alt="footer-logo">
+                            </h2>
+                            <ul class="footer__item-list">
+                                <li class="footer__item-sub footer__item-sub--desc">
+                                    {{ footer.discription }}
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer__item">
+                            <h2 class="footer__item-head">
+                                {{ footer.britishlogo }}
+                            </h2>
+                            <ul class="footer__item-list">
+                                {% if footersectionone %}
+                                {% for det in footersectionone %}
+                                <li class="footer__item-sub">
+                                    <a href="{{ det.url }}" class="footer__item-sub-link">
+                                    {{ det.text }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </li>
+                        <li class="footer__item">
+                            <h2 class="footer__item-head">
+                                {{ footer.capabalities }}
+                            </h2>
+                            <ul class="footer__item-list">
+                                {% if footersectiontwo %}
+                                {% for det in footersectiontwo %}
+                                <li class="footer__item-sub">
+                                    <a href="{{ det.url }}" class="footer__item-sub-link">
+                                    {{ det.text }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </li>
+                        <li class="footer__item">
+                            <h2 class="footer__item-head">
+                                {{ footer.support }}
+                            </h2>
+                            <ul class="footer__item-list">
+                                {% if footersectionthree %}
+                                {% for det in footersectionthree %}
+                                <li class="footer__item-sub">
+                                    <a href="{{ det.url }}" class="footer__item-sub-link">
+                                    {{ det.text }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                                {% endif %}
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="footer__copyright">
+                        <h2 class="footer__copyright-text">
+                            {{ footer.copyright }}
+                        </h2>
+                        <ul class="social-links">
+                            {% if social %}
+                            {% for det in social %}
+                            <li>
+                                <a href="{{ det.url }}" class="social-links__item">
+                                <i class="{{ det.socialmedia }}"></i>
+                                </a>
+                            </li>
+                            {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </main>
+        <!-- js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script >
+            //// slider
+            
+            var swiper = new Swiper(".testimonial__slider .mySwiper", {
+               effect: "coverflow",
+               centeredSlides: true,
+               // autoplay: {
+               // 	delay: 3000,
+               // 	disableOnInteraction: false
+               // },
+               loop: false,
+               slidesPerView: "2",
+               coverflowEffect: {
+                   rotate: 0,
+                   stretch: 100,
+                   depth: 100,
+                   modifier: 1,
+                   slideShadows: true
+               },
+               navigation: {
+                   prevEl: ".testimonial__slider-btn-prev",
+                   nextEl: ".testimonial__slider-btn-next"
+               },
+               pagination: {
+                   // el: ".swiper-pagination",
+                   clickable: false
+               }
+            });
+            /// slider
+            
+            
+            $('.header__slider-container').slick({
+               dots: false,
+               infinite: true,
+               speed: 1200,
+               slidesToShow: 4,
+               centerMode: true,
+               // variableWidth: true,
+               slidesToScroll: 3,
+               autoplay: true,
+               autoplaySpeed: 1000,
+               draggable: true,
+               pauseOnFocus: false
+            });
+            $('.clients__slider').slick({
+               dots: false,
+               // infinite: true,
+               // speed: 1200,
+               slidesToShow: 6,
+               // centerMode: true,
+               // variableWidth: true,
+               slidesToScroll: 3,
+               // autoplay: true,
+               autoplaySpeed: 1000,
+               draggable: true,
+               pauseOnFocus: false
+            });
+            
+            
+            
+            
+            $(window).on('scroll', function () {
+               if ($(window).scrollTop() > 200) {
+                   $('#nav').addClass('sticky')
+               } else {
+                   $('#nav').removeClass('sticky')
+               }
+            });
+            
+            var swiper = new Swiper(".st__swiper", {
+               effect: "coverflow",
+               grabCursor: true,
+               centeredSlides: true,
+               slidesPerView: "auto",
+               coverflowEffect: {
+                   rotate: 0,
+                   stretch: 100,
+                   depth: 100,
+                   modifier: 1,
+                   slideShadows: true
+               },
+            });
+            
+            /////////////////////////////////////////////////////
+            // Mobile menu
+            const openBtn = document.querySelector(".open-btn")
+            const nav_list = document.querySelector(".nav__list")
+            const body = document.querySelector("body")
+            // const overlay = document.querySelector(".overlay")
+            // const navContact = document.querySelector(".nav-contact")
+            
+            function mobileMenu() {
+               openBtn.classList.toggle("active");
+               nav_list.classList.toggle("active")
+               body.classList.toggle("no-scrolling")
+               // navContact.classList.toggle("hidden")
+            }
+            
+            openBtn.addEventListener("click", mobileMenu)
+            // overlay.addEventListener("click", mobileMenu)
+            
+            
+            
+            ///////////////////////////////////////
+            /// video
+            const video = document.getElementById("myMovie")
+            const videoPlayBtn = document.getElementById("Playpause")
+            const muteIcons = document.querySelectorAll(".video-section__mute-btn")
+            const videoMuteBtn = document.getElementById("MuteButton")
+            
+            // cta
+            
+            const ctaVideo = document.getElementById("cta-video")
+            const ctaVideoPlayBtn = document.getElementById("cta-Playpause")
+            const ctaMuteIcons = document.querySelectorAll(".video-section__cta-mute-btn")
+            const ctaMuteBtn = document.getElementById("cta-MuteButton")
+            
+            
+            
+            function loadVideo() {
+               video.addEventListener('click', () => {
+                   playOrPause(video, videoPlayBtn)
+               }, false);
+               videoPlayBtn.addEventListener('click', () => {
+                   playOrPause(video, videoPlayBtn)
+               }, false);
+               ctaVideo.addEventListener('click', () => {
+                   playOrPause(ctaVideo, ctaVideoPlayBtn)
+               }, false);
+               ctaVideoPlayBtn.addEventListener('click', () => {
+                   playOrPause(ctaVideo, ctaVideoPlayBtn)
+               }, false);
+            }
+            function playOrPause(video, videoPlayBtn) {
+               if (!video.paused && !video.ended) {
+                   video.pause();
+               } else {
+                   video.play();
+               }
+               videoPlayBtn.classList.toggle('hidden');
+            
+            }
+            
+            const muteFunction = (video, muteIcons) => {
+            
+               if (video.muted) {
+                   video.muted = false;
+               } else {
+                   video.muted = true;
+               }
+            
+               muteIcons.forEach((el) => {
+                   el.classList.toggle("hidden")
+               })
+            
+            }
+            
+            
+            
+            window.addEventListener('load', loadVideo, false);
+            videoMuteBtn.addEventListener("click", () => {
+               muteFunction(video, muteIcons)
+            })
+            ctaMuteBtn.addEventListener("click", () => {
+               muteFunction(ctaVideo, ctaMuteIcons)
+            })
+            
+            
+            //////////////////////////////////
+            // faq
+            
+            // close opened details
+            const details = document.querySelectorAll(".faq__container details");
+            const faqImg = document.querySelector(".features__left img")
+            
+            
+            details.forEach((targetDetail) => {
+               targetDetail.addEventListener("click", (el) => {
+                   if (targetDetail.dataset.img) {
+                       console.log("img", faqImg.attributes.src);
+                       faqImg.setAttribute("src", targetDetail.dataset.img)
+                   }
+                   details.forEach((detail) => {
+                       detail.removeAttribute("open");
+                   });
+            
+                   el.target.addAttribute("open")
+            
+            
+               });
+            
+            });
+            
+            
+            
+            //////////////////////////////////////////
+            //// gsap
+            
+            
+            let tl = gsap.timeline({ repeat: -1, defaults: { duration: 1 } });
+            
+            tl.fromTo(".about__img-can", { y: 0 }, { y: -20, ease: "none" })
+            tl.fromTo(".about__img-can", { y: -20 }, { y: 0, ease: "none" })
+            // tl.fromTo(".about__img-can", { y: 0 }, { y: 20, ease: "none" })
+            // tl.fromTo(".about__img-can", { y: 20 }, { y: 0, ease: "none" })
+            
+            
+                 
+        </script>
+    </body>
+</html>
